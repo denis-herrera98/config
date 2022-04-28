@@ -1,8 +1,4 @@
 
-let g:ale_linters = {
-      \   'ruby': ['standardrb', 'rubocop'],
-      \}
-let g:ale_disable_lsp = 1
 "let g:airline#extensions#ale#enabled = 1
 let mapleader = " "
 let loaded_matchparen = 1
@@ -24,3 +20,8 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" let g:python_highlight_all = 1

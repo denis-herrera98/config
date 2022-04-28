@@ -10,7 +10,6 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>gc :GCheckout<CR>
-nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
@@ -24,6 +23,7 @@ vnoremap <leader>p "_dP
 
 nnoremap <Tab> :bnext <CR>
 nnoremap <S-Tab> :bprevious <CR>
+nnoremap <Leader>wx :bdelete <CR>
 
 " Console log from visual mode on next line, puts visual selection inside parentheses
 vmap cll yocll<Esc>p
@@ -83,6 +83,9 @@ nmap <leader>d_ <Plug>VimspectorRestart
 nnoremap <leader>d<space> :call vimspector#Continue()<CR>
 nnoremap <silent> K :call CocAction('doHover')<CR>
 
+
+nmap <leader>df :source ~/.config/nvim/init.vim <CR>
+
 nmap <leader>drc <Plug>VimspectorRunToCursor
 nmap <leader>dbp <Plug>VimspectorToggleBreakpoint
 nmap <leader>dcbp <Plug>VimspectorToggleConditionalBreakpoint
@@ -95,3 +98,10 @@ vmap cll yocll<Esc>p
 nmap cll yiwocll<Esc>p
 
 
+nnoremap <leader>pf <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)

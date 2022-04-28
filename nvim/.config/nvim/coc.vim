@@ -40,3 +40,5 @@ endif
   
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+

@@ -6,7 +6,8 @@ source $HOME/.config/nvim/maps.vim
 source $HOME/.config/nvim/func.vim
   
 "source $HOME/.config/nvim/themes/onedark.vim
-source $HOME/.config/nvim/themes/airline.vim
+"source $HOME/.config/nvim/themes/airline.vim
+
 highlight Normal guibg=none
 "colorscheme gruvbox
 "let g:gruvbox_contrast_dark = 'hard'
@@ -14,7 +15,7 @@ highlight Normal guibg=none
 
 set termguicolors
 
-colorscheme nord 
+colorscheme gruvbox 
 
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -39,11 +40,7 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
     let g:coc_global_extensions += ['coc-eslint']
 endif
 
-let g:LanguageClient_serverCommands = {
-            \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
-            \ }
 
 
-"eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 "
 "

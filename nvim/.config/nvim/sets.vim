@@ -11,7 +11,6 @@ set expandtab
 set smartindent
 set nu
 set nowrap
-set smartcase
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
@@ -31,5 +30,5 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 set colorcolumn=80
-
 set laststatus=2
+set statusline^=%{coc#status()}
