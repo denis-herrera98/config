@@ -13,7 +13,7 @@ set nu
 set nowrap
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
 set scrolloff=8
@@ -31,4 +31,4 @@ set updatetime=50
 set shortmess+=c
 set colorcolumn=80
 set laststatus=2
-set statusline^=%{coc#status()}
+" set statusline^=%{coc#status()}

@@ -1,5 +1,5 @@
 
-"let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#ale#enabled = 1
 let mapleader = " "
 let loaded_matchparen = 1
 let dart_html_in_string=v:true
@@ -14,7 +14,7 @@ let g:lsc_server_commands = {'dart': 'dart_language_server'}
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
 " EMMET
-"let g:user_emmet_mode='n'    "only enable normal mode functions.
+" let g:user_emmet_mode='n'    "only enable normal mode functions.
 
 if executable('rg')
     let g:rg_derive_root='true'
@@ -23,5 +23,8 @@ endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='base16'
 
 " let g:python_highlight_all = 1
+"
+autocmd FileType scss setl iskeyword+=@-@

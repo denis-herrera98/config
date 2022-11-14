@@ -1,5 +1,4 @@
 nnoremap <leader>ghw :h <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -10,17 +9,13 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>gc :GCheckout<CR>
-nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
 vnoremap <leader>p "_dP
-
 nnoremap <Tab> :bnext <CR>
 nnoremap <S-Tab> :bprevious <CR>
 nnoremap <Leader>wx :bdelete <CR>
@@ -31,32 +26,30 @@ vmap cll yocll<Esc>p
 nmap cll yiwocll<Esc>p
 
 
-nmap <leader>s <Plug>(easymotion-s2)
+" nmap <leader>s <Plug>(easymotion-s2)
 " vim TODO
 nmap <Leader>nt :NERDTreeFind<CR>
 " Vim with me
-"nnoremap <leader>vwm :colorscheme gruvbox<bar>:set background=dark<CR>
+" nnoremap <leader>vwm :colorscheme gruvbox<bar>:set background=dark<CR>
 nmap <leader>vtm :highlight Pmenu ctermbg=gray guibg=gray
 vnoremap X "_d
 inoremap <C-c> <esc>
 
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-inoremap <silent><expr> <C-space> coc#refresh()
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " GoTo code navigation.
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rr <Plug>(coc-rename)
-nmap <leader>g[ <Plug>(coc-diagnostic-prev)
-nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
-nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
-nnoremap <leader>cr :CocRestart
+" nmap <leader>gd <Plug>(coc-definition)
+" nmap <leader>gy <Plug>(coc-type-definition)
+" nmap <leader>gi <Plug>(coc-implementation)
+" nmap <leader>gr <Plug>(coc-references)
+" nmap <leader>rr <Plug>(coc-rename)
+" nmap <leader>g[ <Plug>(coc-diagnostic-prev)
+" nmap <leader>g] <Plug>(coc-diagnostic-next)
+" nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
+" nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
+" nnoremap <leader>cr :CocRestart
 
 " Sweet Sweet FuGITive
 nmap <leader>gl :diffget //3<CR>
@@ -81,7 +74,6 @@ nmap <leader>dj <Plug>VimspectorStepOver
 nmap <leader>dk <Plug>VimspectorStepOut
 nmap <leader>d_ <Plug>VimspectorRestart
 nnoremap <leader>d<space> :call vimspector#Continue()<CR>
-nnoremap <silent> K :call CocAction('doHover')<CR>
 
 
 nmap <leader>df :source ~/.config/nvim/init.vim <CR>
@@ -102,6 +94,19 @@ nnoremap <leader>pf <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" keep visual mode after indent
+vnoremap > >gv
+vnoremap < <gv
 
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+
+
+" nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
+" inoremap <silent><expr> <C-space> coc#refresh()
+" vmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
+" inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>'
+" inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>'
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile
+"  nnoremap <silent> K :call CocAction('doHover')<CR>
