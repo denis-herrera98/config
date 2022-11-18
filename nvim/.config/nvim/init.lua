@@ -1,0 +1,8 @@
+require('deheto/plugins')
+require('deheto/nvcode')
+require('deheto/maps')
+require('deheto/mysets')
+require('deheto/telescope')
+require('deheto/treesitter')
+require('deheto/lsp-config')
+require('deheto/cmp')
