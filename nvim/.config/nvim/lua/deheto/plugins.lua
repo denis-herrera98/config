@@ -23,22 +23,39 @@ use {
     }
 
 use 'mfussenegger/nvim-dap'
-use 'williamboman/mason.nvim'
-use 'williamboman/mason-lspconfig.nvim'
+--
 -- CMP
 use 'neovim/nvim-lspconfig'
+use 'williamboman/mason.nvim'
+use 'williamboman/mason-lspconfig.nvim'
 use 'hrsh7th/cmp-nvim-lsp'
 use 'hrsh7th/cmp-buffer'
 use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
+use 'hrsh7th/cmp-nvim-lua'
+use 'hrsh7th/cmp-vsnip'
+use 'hrsh7th/vim-vsnip'
+use 'jose-elias-alvarez/null-ls.nvim'
 
+use 'mbbill/undotree'
+use 'tpope/vim-fugitive'
+use 'vim-utils/vim-man'
+
+use 'nvim-lua/popup.nvim'
+use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 --
+
+use 'kyazdani42/nvim-web-devicons'
+use 'glepnir/galaxyline.nvim'
+
+use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
+
 ---- ESTE ES EL DE GIT
---use 'tpope/vim-fugitive'
---use 'vim-utils/vim-man'
 ---- ESPACIO + U
---use 'mbbill/undotree'
 ---- use 'puremourning/vimspector'
 --use 'szw/vim-maximizer'
 --use 'stsewd/fzf-checkout.vim'
@@ -47,12 +64,9 @@ use 'hrsh7th/nvim-cmp'
 --use 'sheerun/vim-polyglot'
 --use 'scrooloose/nerdcommenter'
 --use 'nvim-lua/plenary.nvim'
----- use 'nvim-treesitter/nvim-treesitter'
 --
 ---- THEMES
 --
---use 'vim-airline/vim-airline'
---use 'vim-airline/vim-airline-themes'
 --use 'gruvbox-community/gruvbox'
 --use 'sainnhe/gruvbox-material'
 

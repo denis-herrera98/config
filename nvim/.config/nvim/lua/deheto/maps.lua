@@ -19,7 +19,7 @@ vim.api.nvim_set_keymap('v', '>', ">gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<', "<gv", { noremap = true, silent = true })
 
 
-vim.api.nvim_set_keymap('n', '<Leader>df', ':source ~/.config/nvim/init.vim<CR>', { noremap = false, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>df', ':source ~/.config/nvim/init.lua<CR>', { noremap = false, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>nt', ':NERDTreeFind<CR>', { noremap = false, silent = true })
 
 -- Console log from visual mode on next line, puts visual selection inside parentheses
