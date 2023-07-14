@@ -2,8 +2,6 @@ vim.g.mapleader = ' '
 
 vim.api.nvim_set_keymap('n', '<Leader>p', "'_dP", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>u', ':UndotreeShow<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>ps', ':Rg<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-p>', ':GFiles<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>wx', ':bdelete<CR>', { noremap = true, silent = true })
@@ -14,13 +12,21 @@ vim.api.nvim_set_keymap('n', '<Leader>l', ':wincmd l<CR>', { noremap = true, sil
 
 
 vim.api.nvim_set_keymap('v', 'X', "'_d", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', 'X', "'_d", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '>', ">gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<', "<gv", { noremap = true, silent = true })
 
+vim.keymap.set('x', '<leader>p', "\"_dP")
+vim.keymap.set('i', '<C-c>', "<Esc>")
 
 vim.api.nvim_set_keymap('n', '<Leader>df', ':source ~/.config/nvim/init.lua<CR>', { noremap = false, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>nt', ':NERDTreeFind<CR>', { noremap = false, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>nt', ':NvimTreeOpen<CR>', { noremap = false, silent = true })
+
+-- TMUX
+vim.api.nvim_set_keymap('n', '<C-h>', '<cmd>TmuxNavigateLeft<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-l>', '<cmd>TmuxNavigateRight<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-j>', '<cmd>TmuxNavigateDown<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>TmuxNavigateUp<CR>', {noremap = true, silent = true})
+
 
 -- Console log from visual mode on next line, puts visual selection inside parentheses
 -- vmap cll yocll<Esc>p
